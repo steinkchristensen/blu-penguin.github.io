@@ -1,14 +1,14 @@
 body {
-	background: url('/assets/mountain.jpg') no-repeat fixed top;
-	background-size: cover;
+  background: url('/assets/mountain.jpg') no-repeat fixed top;
+  background-size: cover;
 }
 
 h1, h4 {
-	color:white;
+  color:white;
 }
 
 h2, h3 {
-	color:#fd9727;
+  color:#fd9727;
 }
 
 .jumbotron {
