@@ -1,9 +1,9 @@
 body {
-  background: url('/assets/mountain.jpg') no-repeat fixed top;
+  background: url('assets/mountain.jpg') no-repeat fixed top;
   background-size: cover;
 }
 
-h1, h4 {
+h1, h4, h5 {
   color:white;
 }
 
@@ -13,4 +13,11 @@ h2, h3 {
 
 .jumbotron {
     background: rgb(39, 39, 39);
+    height: 100%;
+    padding: 12px;
+}
+
+.logo {
+  background: url('assets/mountain.jpg') no-repeat fixed top;
+  background-size: cover;
 }
