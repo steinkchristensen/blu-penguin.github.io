@@ -28,7 +28,7 @@ sphere.applyMatrix(new THREE.Matrix4().makeScale(-1, 1, 1));
 
 // creation of the sphere material
 var sphereMaterial = new THREE.MeshBasicMaterial();
-sphereMaterial.map = THREE.TextureLoader(panoramasArray[panoramaNumber])
+sphereMaterial.map = THREE.ImageUtils.loadTexture(panoramasArray[panoramaNumber])
 
 // geometry + material = mesh (actual object)
 var sphereMesh = new THREE.Mesh(sphere, sphereMaterial);
@@ -99,6 +99,6 @@ function onDocumentMouseUp(event){
 document.onkeyup = function(event){
 
   panoramaNumber = (panoramaNumber + 1) % panoramasArray.length
-  sphereMaterial.map = THREE.TextureLoader(panoramasArray[panoramaNumber])
+  sphereMaterial.map = THREE.ImageUtils.loadTexture(panoramasArray[panoramaNumber])
 
 }
