@@ -7,7 +7,7 @@ var savedLongitude;
 var savedLatitude;
 
 // panoramas background
-var panoramasArray = ["assets/night.jpg", "assets/sardinia.jpg"];
+var panoramasArray = ["assets/night_logo.jpg", "assets/sardinia_logo.jpg"];
 var panoramaNumber = Math.floor(Math.random()*panoramasArray.length);
 
 // setting up the renderer
