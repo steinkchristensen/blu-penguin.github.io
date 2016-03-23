@@ -12,7 +12,7 @@ var panoramaNumber = Math.floor(Math.random()*panoramasArray.length);
 
 // setting up the renderer
 renderer = new THREE.WebGLRenderer();
-renderer.setSize(window.innerWidth, window.innerHeight * 0.9);
+renderer.setSize(window.innerWidth, window.innerHeight * 0.95);
 document.body.appendChild(renderer.domElement);
 
 // creating a new scene
