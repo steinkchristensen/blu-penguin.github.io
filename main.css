@@ -22,6 +22,14 @@ a, h2, h3 {
   color:#fd9727;
 }
 
+.navbar-brand {
+  text-shadow: none;
+}
+
+.scroll-link {
+  text-shadow: none !important;
+}
+
 .process, .team {
   padding-top: 30px;
 }
