@@ -14,6 +14,7 @@
         <img id="right" src="img/orange.PNG">
         <img id="odell" src="img/Odell.PNG">
         <img id="shop" src = "img/Shop.JPG">
+        <img id="shadow2" src="img/radial-shadow-2.png">
      </a-assets>
      
       <a-sky src="#shop"></a-sky>
@@ -32,10 +33,17 @@
       <!-- a-entity geometry="primitive: box" material="color: #3546C0" position="0 5 0" stereo="eye: right"></a-entity -->
       
       <!-- a-entity stereo="eye:left" -->
-      <a-curvedimage position="0 0.5 0" theta-length="70" radius="5.7" height="1.0" src="#odell" >
-        <a-event name="cursor-mouseenter" scale="2 2 1" ></a-event>
-        <a-event name="cursor-mouseleave" scale="1 1 1" ></a-event>
-      </a-curvedimage>
+      <a-box id="orange-cube" position="0 3.5 -2" rotation="30 30 0" width="2" depth="2"
+             height="2" color="#F16745" roughness="0.8">
+        <a-event name="cursor-mouseenter" scale="3 1 1" color="#FFC65D"></a-event>
+        <a-event name="cursor-mouseenter" target="#shadow" scale="3 2 2"></a-event>
+        <a-event name="cursor-mouseleave" scale="1 1 1" color="#F16745"></a-event>
+        <a-event name="cursor-mouseleave" target="#shadow" scale="2 2 2"></a-event>
+      </a-box>
+
+      <a-image id="shadow" position="0 0 -2" src="#shadow2" opacity="0.5" rotation="-90 0 0"
+               scale="2 2 2"></a-image>
+      <a-sky color="#ECECEC"></a-sky>
       <!-- /a-entity -->
       <!-- a-entity stereo="eye:right" -->
       <!-- a-curvedimage position="0 -3 0" theta-length="360" radius="5.7" height="3.0" src="#right" stereo="eye:right"></a-curvedimage -->
