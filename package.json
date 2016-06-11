@@ -1,6 +1,8 @@
 {
   "dependencies": {
     "aframe": "^0.2.0",
+    "aframe-core": "^0.1.6",
+    "aframe-no-click-look-controls": "^1.0.4",
     "aframe-stereo-component": "^0.2.0",
     "browserify": "^13.0.1",
     "require": "^2.4.20"

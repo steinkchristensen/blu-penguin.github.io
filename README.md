@@ -1,4 +1,4 @@
-# blu-penguin.github.io
+# BluePengu.in
 
 ## Installation
 
