@@ -1,173 +1,284 @@
 <!DOCTYPE html>
 <html lang="en">
-	<head>
-		<meta charset="utf-8">
+  <head>
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
-    <title>Blue Penguin VR</title>
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <!-- link rel="shortcut icon" href="/favicon.ico" type="image/x-icon" -->
+    <!-- link rel="icon" href="/favicon.ico" type="image/x-icon" -->
 
-    <!-- Bootstrap -->
-		<!-- Latest compiled and minified CSS -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <title>Kaden's Webpage</title>
+	<link href="css/project_main.css" rel="stylesheet">
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <!-- Bootstrap theme -->
+    <link href="css/bootstrap-theme.min.css" rel="stylesheet">
 
-		<!-- Optional theme -->
-		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+    <!-- Custom styles for this template -->
+    <link href="css/index.css" rel="stylesheet">
 
-    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <script src="../../assets/js/ie-emulation-modes-warning.js"></script>
+
+    <!-- HTML5 shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!--[if lt IE 9]>
       <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
       <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
     <![endif]-->
-
-    <script type="text/javascript">
-      function getViewportHeight() {
-        if (window.innerHeight) {
-            return window.innerHeight;
-        }
-        else if (document.body && document.body.offsetHeight) {
-            return document.body.offsetHeight;
-        }
-        else {
-            return 0;
-        }
-      }
-
-      function setHeight() {
-        var divHeight = getViewportHeight();
-        //document.getElementById('panorama').style.minHeight = divHeight+'px';
-        //document.getElementById('panorama').style.paddingTop = divHeight/4+'px';
-        document.getElementById('process').style.minHeight = divHeight+'px';
-        document.getElementById('process').style.paddingTop = divHeight/4+'px';
-        document.getElementById('team').style.minHeight = divHeight+'px';
-        document.getElementById('team').style.paddingTop = divHeight/4+'px';
-      }
-      
-      window.onload = setHeight;
-    </script>
-    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.0/jquery.scrollTo.min.js"></script>
-    <script src="//cdnjs.cloudflare.com/ajax/libs/three.js/r69/three.min.js"></script>
-    <script src="js/three.min.js"></script>
-    <script src="js/scrollTo.js"></script>
-
-    <link rel="stylesheet" type="text/css" href="main.css">
   </head>
-  <body>
-    <script src="js/panorama.js"></script>
-    <nav class="navbar navbar-default navbar-fixed-top">
-      <div class="container-fluid">
+
+  <body role="document">
+
+    <!-- Fixed navbar -->
+    <div class="navbar navbar-default navbar-fixed-top" role="navigation">
+      <div class="container">
         <div class="navbar-header">
-          <a class="navbar-brand" href="#">
-            <span><img src="assets/logo.png" style="height:30px;"></span>
-            Blue Penguin
-          </a>
-        </div>
-        <div class="collapse navbar-collapse">
+          <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+		  <a href="index.html" class="navbar-brand">
+			<div style="color:#426891">Kaden Strand</div>
+		  </a>
+		  
+			
+		</div>
+        <div class="navbar-collapse collapse">
           <ul class="nav navbar-nav navbar-right">
-            <li><a href="#" class="scroll-link" data-id="process">Our Process</a></li>
-            <li><a href="#" class="scroll-link" data-id="team">Our Team</a></li>
-            <li><a href="#" class="scroll-link" data-id="contact-us">Contact Us</a></li>
+            <li class="active"><a href="#">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="projects.html">Projects</a></li>
+			 <li><a href="pictures.html">Pictures</a></li>
+			<!-- <li><a href="contact.html">Contact</a></li> -->
           </ul>
-        </div>
-      </div>
-    </nav>
-
-    <div class="jumbotron">
-      <div class="container-fluid">
-            <h4 style="text-align:center;"><a href="http://www.bluepengu.in/cardboard" style="color:white;">Have a Google Cardboard? Try our demo!</a></h4>
+        </div><!--/.nav-collapse -->
       </div>
     </div>
+	
+	<div style="margin-top:50px">
 
-    <!--div id="panorama">
-    </div-->
+      <!-- Main jumbotron for a primary marketing message or call to action -->
+      <!--div class="span3"-->
+    <div id="myCarousel" class="carousel slide"  data-ride="carousel" >
+		<div style="display: none;">
+			  <ul style="hide" class="carousel indicators">
+				<li data-target="#myCarousel" data-slide-to="0" class="active"></li>
+				<li data-target="#myCarousel" data-slide-to="1" class=""></li>
+				<li data-target="#myCarousel" data-slide-to="2" class=""></li>
+				<li data-target="#myCarousel" data-slide-to="3" class=""></li>
+				<li data-target="#myCarousel" data-slide-to="4" class=""></li>
+				<li data-target="#myCarousel" data-slide-to="5" class=""></li>
+				<li data-target="#myCarousel" data-slide-to="6" class=""></li>
+				
+			  </ul>
+		</div>
 
-    <div id="process" class="process">
-      <div class="container">
-        <h1>Our Process</h1>
-        <div class="row">
-          <div class="col-md-4 col-sm-12">
-            <div class="jumbotron">
-              <h3><span class="glyphicon glyphicon-facetime-video" aria-hidden="true"></span> Step 1</h3>
-              <h4>Capture Stunning Content</h4>
-              <h5>Grasp the essence of your product through 3D, 360 degree filming.</h5>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-12">
-            <div class="jumbotron">
-                <h3><span class="glyphicon glyphicon-wrench" aria-hidden="true"></span> Step 2</h3>
-              <h4>Build Your New Reality</h4>
-              <h5>Bring your product to life through a custom application and interactive virtual reality features.</h5>
-            </div>
-          </div>
-          <div class="col-md-4 col-sm-12">
-            <div class="jumbotron">
-              <h3><span class="glyphicon glyphicon-send" aria-hidden="true"></span> Step 3</h3>
-              <h4>Share With the World</h4>
-              <h5>Send the product to your customers, with customized affordable headsets or showcase the experience with cutting edge virtual reality hardware.</h5>
-            </div>
-          </div>
-        </div>
+      <div class="carousel-inner">
+		
+			<div class="item active">
+				<img src = "img/index/NZ_Mountain_Quote.jpg" style="width:100%; height:auto; margin-left:auto;margin-right:auto" class="img-responsive">
+				<div class="carousel-caption">
+					<div style="width:100%; margin-left:auto; margin-right:auto;">
+						<p><i>Southern Alps, New Zealand</i></p>
+					</div>
+				</div>
+			</div>
+		
+			<div class="item">
+				<img src = "img/index/Moeraki_1.jpg" style="width:100%; height:auto; margin-left:auto;margin-right:auto" class="img-responsive">
+				<div class="carousel-caption">
+					<div style="width:100%; margin-left:auto; margin-right:auto;">
+						<p><i>Moeraki Boulders, New Zealand</i></p>
+					</div>
+				</div>
+			</div>
+			
+			<div class="item">
+				<img src = "img/index/Seals.jpg" style="width:100%; height:auto; margin-left:auto;margin-right:auto" class="img-responsive">
+				<div class="carousel-caption">
+					<div style="width:100%; margin-left:auto; margin-right:auto;">
+						<p><i>Fur Seals, New Zealand</i></p>
+					</div>
+				</div>
+			</div>
+		
+			<div class="item">
+				<img src = "img/index/Milford.jpg" style="width:100%; height:auto; margin-left:auto;margin-right:auto" class="img-responsive">
+				<div class="carousel-caption">
+					<div style="width:100%; margin-left:auto; margin-right:auto;">
+						<p><i>Milford Sound, New Zealand</i></p>
+					</div>
+				</div>
+			</div>
+			
+		
+			<div class="item">
+				<img src = "img/index/Kaikoura.jpg" style="width:100%; height:auto; margin-left:auto;margin-right:auto" class="img-responsive">
+				<div class="carousel-caption">
+					<div style="width:100%; margin-left:auto; margin-right:auto;">
+						<p><i>Kaikoura, New Zealand</i></p>
+					</div>
+				</div>
+			</div>
+			
+		
+			<div class="item">
+				<img src = "img/index/Wolf Robot.png" style="width:100%; height:auto; margin-left:auto;margin-right:auto" class="img-responsive">
+				<div class="carousel-caption">
+					<div style="width:100%; margin-left:auto; margin-right:auto;">
+						<p><i>Wolf Robotics Project</i></p>
+					</div>
+				</div>
+			</div>
+  
       </div>
+      <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <span class="glyphicon glyphicon-chevron-left"></span>
+      </a>
+      <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <span class="glyphicon glyphicon-chevron-right"></span>
+      </a>
     </div>
+  <!--/div-->
 
-    <div id="team" class="process">
-      <div class="container">
-        <h1>Our Team</h1>
-        <div class="row">
-          <div class="col-md-3 col-sm-12">
-            <div class="jumbotron" style="padding:15px;">
-              <a href="#" class="thumbnail">
-                <img src="assets/kaden.jpg">
-              </a>
-              <h3>Kaden Strand</h3>
-              <h5>I have always been interested in starting my own business. I have worked for Bounce Software, a local custom software company that was extremely small (only 7 people when I worked there). As a member of the Bounce team I learned a lot about how small businesses operate, and my work there has certainly inspired me to pursue starting my own business. Entering college in 2012, I was a recipient of the OtterBox Entrepreneurial Scholarship. The past four years I have been working hard to obtain degrees in engineering and natural science, and I am now looking forward to bringing these skills to market in my own business!</h5>
-            </div>
-          </div>
-          <div class="col-md-3 col-sm-12">
-           <div class="jumbotron" style="padding:15px;">
-              <a href="#" class="thumbnail">
-                <img src="assets/adrian.jpg">
-              </a>
-              <h3>Adrian Chen</h3>
-              <h5>Since my childhood I have been fascinated by how technology will shape the future. As I grew up I started programming at a young age and participated in many technologically oriented groups. In college I majored in electrical engineering and computer science, as I was not sure if I wanted to pursue software or hardware more. Due to the high demand, growing field, and low barriers to entry, I selected software, and have been fascinated with building cutting edge software ever since. I have developed software for several companies, and am excited to make my mark on the virtual reality industry.</h5>
-            </div>
-          </div>
-          <div class="col-md-3 col-sm-12">
-            <div class="jumbotron" style="padding:15px;">
-              <a href="#" class="thumbnail">
-                <img src="assets/vlad.jpg">
-              </a>
-              <h3>Vlad Miller</h3>
-              <h5> Worked in the start-up apparel company. Background in Finance. Works in financial analysis, business structure creation and business development through sales, investor relations and operations improvements. I want to see another perspective. I want to see the advice. I want to see what other young entrepreneurs are doing and how they handle their business. I made my first $1,000 at age of 12 by re-selling online game accounts and currency.</h5>
-            </div>
-          </div>
-          <div class="col-md-3 col-sm-12">
-            <div class="jumbotron" style="padding:15px;">
-              <a href="#" class="thumbnail">
-                <img src="assets/stein.jpg">
-              </a>
-              <h3>Stein Christensen</h3>
-              <h5>As president of CSU Startup and a freelance web marketer, I have always had a burning passion for the world of entrepreneurship. I work for myself creating websites for clients and contracting my social media marketing expertise. As a kid, I was always looking for a way to make a quick couple bucks. Every summer during our neighborhood garage sale, my neighborhood friends and I would tie each other up to a lawn chair and sell water balloons to people passing by so they could throw a water balloon at a kid for a dollar.</h5>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
+  </div>
 
-    <div id="contact-us" class="jumbotron contact-us" style="border: 0px; margin: 0px;">
-      <div class="container">
-        <h3 style="color:white;">Contact Us</h3>
-        <h4 style="color:white;">Email: <a href="mailto:help.bluepenguin@gmail.com">help.bluepenguin@gmail.com</a></h4>
-      </div>
-    </div>
+<div class="container-fluid" style="margin-bottom:0px; background-color:white;">
+	<div class="container">
+		<h2 class="project-title">Welcome! My name is Kaden Strand.</h2>
+		
+	
+	
+		<div class="panel panel-default">
+		  <div class="panel-heading">
+			<h3 class="panel-title">About</h3>
+		  </div>
+		  <div class="panel-body">
+			I am a computer engineering student studying at Colorado State University. I am fascinated by innovations in science and technology, with career interests in aerospace, 
+			robotics, artificial intelligence, human-computer interaction, and brain-computer interfaces. I also enjoy taking pictures of interesting places that I have visited, 
+			and when I have time I like to work on projects. Check out the links above to see my pictures and projects. 
+			
+			<div class="row">
+			<div class="col-lg-9">
+			<br>Thank you for visiting my site!
+			</div>
+			<div class="col-lg-3">
+			 <center><a class="btn btn-primary" href="about.html" role="button">See More</a></center>
+			</div>
+			
+		  </div>
+			
+		  </div>
+		</div>
+		
+		
+		<div class="panel panel-default">
+		  <div class="panel-heading">
+			<h3 class="panel-title">Projects</h3>
+		  </div>
+		  <div class="panel-body">
+			
+		 <table class="table table-hover">
+			  <thead>
+				<tr>
+				  <th>Date</th>
+				  <th>Project</th>
+				  <th>Description</th>
+				</tr>
+			  </thead>
+			  <tbody>
+				<tr>
+				  <th scope="row">Fall 2015 - Spring 2016</th>
+				  <td>EcoCar3</td>
+				  <td>My senior design project is to work on the control system for a 2015 Chevy Camero for the EcoCar3 competition.</td>
+				</tr>
+				<tr>
+				  <th scope="row">Summer 2015</th>
+				  <td>Personal Website</td>
+				  <td>This website is a personal project of mine. It is currently hosted via Github pages.</td>
+				</tr>
+				<tr>
+				  <th scope="row">Fall 2014 - Spring 2016</th>
+				  <td>Wolf Eye</td>
+				  <td>Working with Wolf Robotics, this year-long project provided an efficient and repeatable method to accurately calibrate a robotic arm in three dimensional space using a laser sensor.</td>
+				</tr>
+				<tr>
+				  <th scope="row">Fall 2014</th>
+				  <td>V.E.S.P.A</td>
+				  <td>The Voice Enabled System For Power Allocation was a semester project of ECE 561: Hardware/Software Design of Embedded Systems at CSU.</td>
+				</tr>
+				<tr>
+				  <th scope="row">Spring 2014</th>
+				  <td>Automated Coffee Maker</td>
+				  <td>An automatic, remotely-accessible coffee maker that uses an Arduino microcontroller, an ethernet shield, and a lot of PVC piping.</td>
+				</tr>
+			  </tbody>
+		</table>
+			
+			
+				<div class="row">
+			<div class="col-lg-9">
+			
+			</div>
+			<div class="col-lg-3">
+			 <center><a class="btn btn-primary" href="projects.html" role="button">View All Project Details</a></center>
+			</div>
+			
+		  </div>
+			
+		  </div>
+		</div>
+	
+	</div>	
+  </div>
 
-    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
-    <!-- Include all compiled plugins (below), or include individual files as needed -->
+<div class="container-fluid" style="margin-left:auto;margin-right:auto;background-color:#0F1F2E;">
+	<div class="container">
+		<p style="color:white; text-align:center"><br>Updated 12/11/2015.<br></p>
+	</div>	
+  </div>
 
-    <!-- Latest compiled and minified JavaScript -->
-		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+    <!-- Bootstrap core JavaScript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="../../assets/js/docs.min.js"></script>
+    <!-- IE10 viewport hack for Surface/desktop Windows 8 bug -->
+    <script src="../../assets/js/ie10-viewport-bug-workaround.js"></script>
+	<script src="js/leap.js"></script>
   </body>
 </html>
+
+
+
+
+
+
+
+<!--Callouts: -->
+<!-- <div class="bs-callout bs-callout-red">
+			<h4>Team Members</h4>
+			<p>
+				Kevin Ball - Computer Engineering, Senior
+				<br>Asa Graf - Electrical Engineering, Junior
+				<br>Kaden Strand - Computer Engineering, Junior
+			<p>
+		</div>
+		<div class="bs-callout bs-callout-grey ">
+			<h4>Faculty Advisor</h4>
+			<p>
+				Dr. Tony Maciejewski - Professor, Department Head CSU Electrical and Computer Engineering
+			<p>
+		</div>
+		<div class="bs-callout bs-callout-orange ">
+			<h4>Industry Advisors</h4>
+			<p>
+				Dan Spieker - Lead Software Engineer, Wolf Robotics, LLC.
+				<br>Levi Mitchell - Software Engineer, Wolf Robotics, LLC.
+				<br>Josh Pawley - Applications Engineer, Wolf Robotics, LLC.
+			<p>
+		</div> -->

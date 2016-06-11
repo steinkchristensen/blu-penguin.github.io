@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <title>Blue Penguin VR</title>
+
+    <!-- Bootstrap -->
+		<!-- Latest compiled and minified CSS -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+
+		<!-- Optional theme -->
+		<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css" integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r" crossorigin="anonymous">
+
+    <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+      <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+      <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <script type="text/javascript">
+      function getViewportHeight() {
+        if (window.innerHeight) {
+            return window.innerHeight;
+        }
+        else if (document.body && document.body.offsetHeight) {
+            return document.body.offsetHeight;
+        }
+        else {
+            return 0;
+        }
+      }
+
+      function setHeight() {
+        var divHeight = getViewportHeight();
+        //document.getElementById('panorama').style.minHeight = divHeight+'px';
+        //document.getElementById('panorama').style.paddingTop = divHeight/4+'px';
+        document.getElementById('process').style.minHeight = divHeight+'px';
+        document.getElementById('process').style.paddingTop = divHeight/4+'px';
+        document.getElementById('team').style.minHeight = divHeight+'px';
+        document.getElementById('team').style.paddingTop = divHeight/4+'px';
+      }
+      
+      window.onload = setHeight;
+    </script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.10.2/jquery.min.js" type="text/javascript"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/2.1.0/jquery.scrollTo.min.js"></script>
+    <script src="//cdnjs.cloudflare.com/ajax/libs/three.js/r69/three.min.js"></script>
+    <script src="js/three.min.js"></script>
+    <script src="js/scrollTo.js"></script>
+
+    <link rel="stylesheet" type="text/css" href="main.css">
+  </head>
+  <body>
+    <script src="js/panorama.js"></script>
+    <nav class="navbar navbar-default navbar-fixed-top">
+      <div class="container-fluid">
+        <div class="navbar-header">
+          <a class="navbar-brand" href="#">
+            <span><img src="assets/logo.png" style="height:30px;"></span>
+            Blue Penguin
+          </a>
+        </div>
+        <div class="collapse navbar-collapse">
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#" class="scroll-link" data-id="process">Our Process</a></li>
+            <li><a href="#" class="scroll-link" data-id="team">Our Team</a></li>
+            <li><a href="#" class="scroll-link" data-id="contact-us">Contact Us</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="jumbotron">
+      <div class="container-fluid">
+            <h4 style="text-align:center;"><a href="http://www.bluepengu.in/cardboard" style="color:white;">Have a Google Cardboard? Try our demo!</a></h4>
+      </div>
+    </div>
+
+    <!--div id="panorama">
+    </div-->
+
+    <div id="process" class="process">
+      <div class="container">
+        <h1>Our Process</h1>
+        <div class="row">
+          <div class="col-md-4 col-sm-12">
+            <div class="jumbotron">
+              <h3><span class="glyphicon glyphicon-facetime-video" aria-hidden="true"></span> Step 1</h3>
+              <h4>Capture Stunning Content</h4>
+              <h5>Grasp the essence of your product through 3D, 360 degree filming.</h5>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-12">
+            <div class="jumbotron">
+                <h3><span class="glyphicon glyphicon-wrench" aria-hidden="true"></span> Step 2</h3>
+              <h4>Build Your New Reality</h4>
+              <h5>Bring your product to life through a custom application and interactive virtual reality features.</h5>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-12">
+            <div class="jumbotron">
+              <h3><span class="glyphicon glyphicon-send" aria-hidden="true"></span> Step 3</h3>
+              <h4>Share With the World</h4>
+              <h5>Send the product to your customers, with customized affordable headsets or showcase the experience with cutting edge virtual reality hardware.</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="team" class="process">
+      <div class="container">
+        <h1>Our Team</h1>
+        <div class="row">
+          <div class="col-md-3 col-sm-12">
+            <div class="jumbotron" style="padding:15px;">
+              <a href="#" class="thumbnail">
+                <img src="assets/kaden.jpg">
+              </a>
+              <h3>Kaden Strand</h3>
+              <h5>I have always been interested in starting my own business. I have worked for Bounce Software, a local custom software company that was extremely small (only 7 people when I worked there). As a member of the Bounce team I learned a lot about how small businesses operate, and my work there has certainly inspired me to pursue starting my own business. Entering college in 2012, I was a recipient of the OtterBox Entrepreneurial Scholarship. The past four years I have been working hard to obtain degrees in engineering and natural science, and I am now looking forward to bringing these skills to market in my own business!</h5>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-12">
+           <div class="jumbotron" style="padding:15px;">
+              <a href="#" class="thumbnail">
+                <img src="assets/adrian.jpg">
+              </a>
+              <h3>Adrian Chen</h3>
+              <h5>Since my childhood I have been fascinated by how technology will shape the future. As I grew up I started programming at a young age and participated in many technologically oriented groups. In college I majored in electrical engineering and computer science, as I was not sure if I wanted to pursue software or hardware more. Due to the high demand, growing field, and low barriers to entry, I selected software, and have been fascinated with building cutting edge software ever since. I have developed software for several companies, and am excited to make my mark on the virtual reality industry.</h5>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-12">
+            <div class="jumbotron" style="padding:15px;">
+              <a href="#" class="thumbnail">
+                <img src="assets/vlad.jpg">
+              </a>
+              <h3>Vlad Miller</h3>
+              <h5> Worked in the start-up apparel company. Background in Finance. Works in financial analysis, business structure creation and business development through sales, investor relations and operations improvements. I want to see another perspective. I want to see the advice. I want to see what other young entrepreneurs are doing and how they handle their business. I made my first $1,000 at age of 12 by re-selling online game accounts and currency.</h5>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-12">
+            <div class="jumbotron" style="padding:15px;">
+              <a href="#" class="thumbnail">
+                <img src="assets/stein.jpg">
+              </a>
+              <h3>Stein Christensen</h3>
+              <h5>As president of CSU Startup and a freelance web marketer, I have always had a burning passion for the world of entrepreneurship. I work for myself creating websites for clients and contracting my social media marketing expertise. As a kid, I was always looking for a way to make a quick couple bucks. Every summer during our neighborhood garage sale, my neighborhood friends and I would tie each other up to a lawn chair and sell water balloons to people passing by so they could throw a water balloon at a kid for a dollar.</h5>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="contact-us" class="jumbotron contact-us" style="border: 0px; margin: 0px;">
+      <div class="container">
+        <h3 style="color:white;">Contact Us</h3>
+        <h4 style="color:white;">Email: <a href="mailto:help.bluepenguin@gmail.com">help.bluepenguin@gmail.com</a></h4>
+      </div>
+    </div>
+
+    <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.3/jquery.min.js"></script>
+    <!-- Include all compiled plugins (below), or include individual files as needed -->
+
+    <!-- Latest compiled and minified JavaScript -->
+		<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
+  </body>
+</html>
