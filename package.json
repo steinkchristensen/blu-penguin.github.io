@@ -1,5 +1,6 @@
 {
   "dependencies": {
-    "aframe": "^0.2.0"
+    "aframe": "^0.2.0",
+    "aframe-stereo-component": "^0.2.0"
   }
 }
