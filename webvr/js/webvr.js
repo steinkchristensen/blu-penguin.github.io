@@ -6,5 +6,5 @@ AFRAME.registerComponent('stereo', stereoComponent);
 var stereocamComponent = require('aframe-stereo-component').stereocam_component;
 AFRAME.registerComponent('stereocam', stereocamComponent);
 
-var NoClickLookControls = require('aframe-no-click-look-controls');
-AFRAME.registerComponent('no-click-look-controls', NoClickLookControls);
+// var NoClickLookControls = require('aframe-no-click-look-controls');
+// AFRAME.registerComponent('no-click-look-controls', NoClickLookControls);
