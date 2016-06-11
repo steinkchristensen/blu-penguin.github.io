@@ -1,0 +1,46 @@
+.bs-callout {
+  margin: 20px 0;
+  padding: 15px 30px 15px 15px;
+  border-left: 5px solid #eee;
+}
+.bs-callout h4 {
+  margin-top: 0;
+}
+.bs-callout p:last-child {
+  margin-bottom: 0;
+}
+.bs-callout code,
+.bs-callout .highlight {
+  background-color: #fff;
+}
+ 
+/* Themes for different contexts */
+.bs-callout-red {
+  background-color: #FFE6E6;
+  border-color: #dFb5b4;
+}
+.bs-callout-grey {
+  background-color: #DEDEDE;
+  border-color: #9E9E9E;
+}
+.bs-callout-orange {
+  background-color: #FFDEBD;
+  border-color: #FFAA54;
+}
+
+.bs-callout-red h4 {
+color: #B94A48;
+}
+
+.bs-callout-grey h4 {
+color: grey;
+}
+
+.bs-callout-orange h4 {
+color: #DB8D56;
+}
+
+section {
+padding-top:40px;
+margin-top:-40px;
+}
