@@ -3,7 +3,7 @@
     <meta charset="utf-8">
     <title>My A-Frame Scene</title>
     <meta name="description" content="Cursor — A-Frame">
-    <script src="https://aframe.io/releases/0.2.0/aframe.min.js"></script>
+    <script src="js/aframe.min.js"></script>
     <!-- <script src="js/bundle.js"></script>
     <script src="js/webvr.js"></script>
     <script src="js/aframe-no-click-look-controls.min.js"></script> -->
@@ -33,43 +33,51 @@
     
       <a-entity position="0 0.4 0">
         <a-entity camera look-controls wasd-controls>
-          <a-entity position="0 0 -3"
-                    geometry="primitive: ring; radiusOuter: 0.30;
-                              radiusInner: 0.20;"
+          <a-entity position="0 0 -0.5"
+                    geometry="primitive: ring; radiusOuter: 0.03;
+                              radiusInner: 0.02;"
                     material="color: cyan; shader: flat"
                     cursor="maxDistance: 30; fuse: true">
             <a-animation begin="click" easing="ease-in" attribute="scale"
-                 fill="backwards" from="0.1 0.1 0.1" to="1 1 1" dur="150"></a-animation>
+                 fill="backwards" from="0.3 0.3 0.3" to="1 1 1" dur="150"></a-animation>
             <a-animation begin="fusing" easing="ease-in" attribute="scale"
-                 fill="forwards" from="1 1 1" to="0.1 0.1 0.1" dur="1500"></a-animation>
+                 fill="forwards" from="1 1 1" to="0.3 0.3 0.3" dur="1500"></a-animation>
           </a-entity>
         </a-entity>
       </a-entity>
 
-      <a-curvedimage src="img/fat_tire_logo.jpg" radius="3" theta-length="0" theta-start="0" height=".85" position="0 0 0" scale=".4 .4 .4"  opacity="0.8">
-        <a-entity id="fat_tire_button" collada-model="#fat_tire" position="0 0 2" scale="2.8 2.8 2.8" rotation="0 -180 0"></a-entity>
+      <a-curvedimage radius="3" theta-length="0" theta-start="0" position="0 0 0"  opacity="0">
+        <a-entity id="fat_tire_button" collada-model="#fat_tire" position="0 0 1" scale="1.5 1.5 1.5" rotation="0 -180 0"></a-entity>
         <a-animation attribute="rotation" from="0 0 0" to="0 -360 0" begin="0" dur="80000" repeat="infinite" easing="linear"></a-animation>
       </a-curvedimage>
 
-      <a-curvedimage radius="3" theta-length="0" theta-start="72" height=".85" position="0 0 0" scale=".4 .4 .4"  opacity="0">
-        <a-entity id="abbey_button" collada-model="#abbey" position="0 0 2" scale="2.8 2.8 2.8" rotation="0 -180 0"></a-entity>
+      <a-curvedimage radius="3" theta-length="0" theta-start="72" position="0 0 0"  opacity="0">
+        <a-entity id="abbey_button" collada-model="#abbey" position="0 0 1" scale="1.5 1.5 1.5" rotation="0 -180 0"></a-entity>
         <a-animation attribute="rotation" from="0 72 0" to="0 -288 0" begin="0" dur="80000" repeat="infinite" easing="linear"></a-animation>
       </a-curvedimage>
 
-      <a-curvedimage radius="3" theta-length="0" theta-start="144" height=".85" position="0 0 0" scale=".4 .4 .4"  opacity="0">
-        <a-entity id="sunshine_button" collada-model="#sunshine" position="0 0 2" scale="2.8 2.8 2.8" rotation="0 -180 0"></a-entity>
+      <a-curvedimage radius="3" theta-length="0" theta-start="144" position="0 0 0" opacity="0">
+        <a-entity id="sunshine_button" collada-model="#sunshine" position="0 0 1" scale="1.5 1.5 1.5" rotation="0 -180 0"></a-entity>
         <a-animation attribute="rotation" from="0 144 0" to="0 -216 0" begin="0" dur="80000" repeat="infinite" easing="linear"></a-animation>
       </a-curvedimage>
 
-      <a-curvedimage radius="3" theta-length="0" theta-start="216" height=".85" position="0 0 0" scale=".4 .4 .4"  opacity="0">
-        <a-entity id="snapshot_button" collada-model="#snapshot" position="0 0 2" scale="2.8 2.8 2.8" rotation="0 -180 0"></a-entity>
+      <a-curvedimage radius="3" theta-length="0" theta-start="216" position="0 0 0" opacity="0">
+        <a-entity id="snapshot_button" collada-model="#snapshot" position="0 0 1" scale="1.5 1.5 1.5" rotation="0 -180 0"></a-entity>
         <a-animation attribute="rotation" from="0 216 0" to="0 -144 0" begin="0" dur="80000" repeat="infinite" easing="linear"></a-animation>
       </a-curvedimage>
 
-      <a-curvedimage radius="3" theta-length="0" theta-start="288" height=".85" position="0 0 0" scale=".4 .4 .4"  opacity="0">
-        <a-entity id="slow_ride_button" collada-model="#slow_ride" position="0 0 2" scale="2.8 2.8 2.8" rotation="0 -180 0"></a-entity>
+      <a-curvedimage radius="3" theta-length="0" theta-start="288" position="0 0 0" opacity="0">
+        <a-entity id="slow_ride_button" collada-model="#slow_ride" position="0 0 1" scale="1.5 1.5 1.5" rotation="0 -180 0"></a-entity>
         <a-animation attribute="rotation" from="0 288 0" to="0 -72 0" begin="0" dur="80000" repeat="infinite" easing="linear"></a-animation>
       </a-curvedimage>
+
+      <a-curvedimage id="fat_tire_logo" src="img/fat_tire_logo.jpg" radius="5" theta-length="36" theta-start="180" height="3" position="0 0.7 0" visible="false"></a-curvedimage>
+      <a-curvedimage id="abbey_logo" src="img/fat_tire_logo.jpg" radius="5" theta-length="36" theta-start="180" height="3" position="0 0.7 0" visible="false"></a-curvedimage>
+      <a-curvedimage id="sunshine_logo" src="img/fat_tire_logo.jpg" radius="5" theta-length="36" theta-start="180" height="3" position="0 0.7 0" visible="false"></a-curvedimage>
+      <a-curvedimage id="snapshot_logo" src="img/fat_tire_logo.jpg" radius="5" theta-length="36" theta-start="180" height="3" position="0 0.7 0" visible="false"></a-curvedimage>
+      <a-curvedimage id="slow_ride_logo" src="img/fat_tire_logo.jpg" radius="5" theta-length="36" theta-start="180" height="3" position="0 0.7 0" visible="false"></a-curvedimage>
+
+
     </a-scene>
 
     <script type="text/javascript">
