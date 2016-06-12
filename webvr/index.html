@@ -29,6 +29,12 @@
       </a-assets>
       <a-sky id="abbey_sky" src="img/abbey.jpg" rotation="0 -130 0" visible="true"></a-sky>
       <a-sky id="sunshine_sky" src="img/sunshine.jpg" rotation="0 -130 0" visible="false"></a-sky>
+      <a-sky id="fat_tire_sky" src="img/sunset.jpg" rotation="0 -130 0" visible="false"></a-sky>
+      <a-sky id="slow_ride_sky" src="img/stars.jpg" rotation="0 -130 0" visible="false"></a-sky>
+      <a-sky id="snapshot_sky" src="img/city.jpg" rotation="0 -130 0" visible="false"></a-sky>
+      <!-- <a-sky id="snapshot_sky" src="img/fancy.jpg" rotation="0 -130 0" visible="false"></a-sky>
+      <a-sky id="snapshot_sky" src="img/bellagio.jpg" rotation="0 -130 0" visible="false"></a-sky>
+      <a-sky id="snapshot_sky" src="img/living_room.jpg" rotation="0 -130 0" visible="false"></a-sky> -->
 
     
       <a-entity position="0 0.4 0">
@@ -75,15 +81,50 @@
     <script type="text/javascript">
     var abbeysky = document.querySelector('#abbey_sky');
     var sunshinesky = document.querySelector('#sunshine_sky');
+    var snapshotsky = document.querySelector('#snapshot_sky');
+    var fattiresky = document.querySelector('#fat_tire_sky');
+    var slowridesky = document.querySelector('#slow_ride_sky');
+
 
     document.querySelector('#abbey_button').addEventListener('click', function() {
       abbeysky.setAttribute('visible', 'true');
       sunshinesky.setAttribute('visible', 'false');
+      snapshotsky.setAttribute('visible', 'false');
+      fattiresky.setAttribute('visible', 'false');
+      slowridesky.setAttribute('visible', 'false');
     });
     
     document.querySelector('#sunshine_button').addEventListener('click', function() {
       abbeysky.setAttribute('visible', 'false');
       sunshinesky.setAttribute('visible', 'true');
+      snapshotsky.setAttribute('visible', 'false');
+      fattiresky.setAttribute('visible', 'false');
+      slowridesky.setAttribute('visible', 'false');
     });
+
+    document.querySelector('#snapshot_button').addEventListener('click', function() {
+      abbeysky.setAttribute('visible', 'false');
+      sunshinesky.setAttribute('visible', 'false');
+      snapshotsky.setAttribute('visible', 'true');
+      fattiresky.setAttribute('visible', 'false');
+      slowridesky.setAttribute('visible', 'false');
+    });
+
+    document.querySelector('#fat_tire_button').addEventListener('click', function() {
+      abbeysky.setAttribute('visible', 'false');
+      sunshinesky.setAttribute('visible', 'false');
+      snapshotsky.setAttribute('visible', 'false');
+      fattiresky.setAttribute('visible', 'true');
+      slowridesky.setAttribute('visible', 'false');
+    });
+
+    document.querySelector('#slow_ride_button').addEventListener('click', function() {
+      abbeysky.setAttribute('visible', 'false');
+      sunshinesky.setAttribute('visible', 'false');
+      snapshotsky.setAttribute('visible', 'false');
+      fattiresky.setAttribute('visible', 'false');
+      slowridesky.setAttribute('visible', 'true');
+    });
+
     </script>
  </html>
